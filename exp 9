@@ -1,0 +1,24 @@
+LXI H, 3000H
+MOV E, M
+INX H
+MOV D, M
+
+INX H
+MOV L, M
+INX H
+MOV H, M
+
+MOV A, E
+ADD L
+MOV C, A
+
+MOV A, D
+ADC H
+MOV B, A
+
+LXI H, 3004H
+MOV M, C
+INX H
+MOV M, B
+
+HLT

@@ -1,0 +1,7 @@
+LXI H, 3000H
+MOV A, M
+ANI 01H
+INX H
+MOV M, A
+
+HLT

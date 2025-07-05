@@ -1,0 +1,18 @@
+LXI H, 3000H
+MOV C, M        ; C = Count
+INX H
+MOV A, M        ; A = First element
+DCR C           ; One element already considered
+
+LOOP: INX H
+CMP M
+JNC SKIP
+MOV A, M
+
+SKIP: DCR C
+JNZ LOOP
+
+LXI H, 3000H
+MOV M, A
+
+HLT
